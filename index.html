@@ -42,7 +42,7 @@
     <nav class="navbar">
         <div class="logo-container">
             <a href="#" id="scroll-to-top">
-                <img src="images/logo2.png" alt="Logo" class="navbar-logo">
+                <img id="navbar-logo" src="images/logo2.png" alt="Logo" class="navbar-logo">
             </a>
         </div>
         <div class="navbar-center">
@@ -50,9 +50,34 @@
             <a href="#prices" class="nav-link">Service</a>
             <a href="#kontakt" class="nav-link">Kontakt</a>
         </div>
-        
-
     </nav>
+    
+    
+    <script>
+        // Function to change the logo and adjust size
+        function changeLogoBasedOnWidth() {
+            const logo = document.getElementById('navbar-logo');
+            const screenWidth = window.innerWidth;
+    
+            // If the screen width is less than 960px, change the logo and apply the smaller size
+            if (screenWidth < 960) {
+                logo.src = 'images/logo3.png';
+                logo.classList.add('small-logo'); // Add class to make it smaller
+            } else {
+                logo.src = 'images/logo2.png';
+                logo.classList.remove('small-logo'); // Remove class for larger logo
+            }
+        }
+    
+        // Run the function on page load
+        window.onload = changeLogoBasedOnWidth;
+    
+        // Run the function on window resize
+        window.onresize = changeLogoBasedOnWidth;
+    </script>
+    
+    
+
     
     <a href="/en/" style="text-decoration: none;">
         <div class="project-box" style="position: fixed; bottom: 20px; left: 20px; background-color: #161C25; border-radius: 12px; padding: 10px; backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); z-index: 9999;">
@@ -73,7 +98,7 @@
     <br><br><br>
 
     <div style="text-align: center; margin-top: 50px;">
-        <b style="font-size: 75px; font-weight: 850; ">Professionelle hjemmesider <br>- fra 4.995,-</b>
+        <b style="font-size: 50px; font-weight: 850; ">Professionelle hjemmesider <br>- fra 4.995,-</b>
         <br>
         <p style="font-size: 25px;">Skræddersyet professionel og troværdig informationshjemmeside fra 4.995,- <br>Fast pris - 14 arbejdsdage</p>
     </div>
@@ -139,11 +164,15 @@
 
 
     
-    <div style="width: 500px; height: auto; overflow: hidden;" class="fade-in">
-        <video autoplay loop muted width="500" style="object-fit: cover; object-position: center center; margin-top: -5px; margin-bottom: -5px;">
-            <source src="images/animation3.mp4" type="video/mp4">
-        </video>
-    </div>
+    
+    
+    <div>
+        <div class="fade-in">
+            <video autoplay loop muted width="500" style="max-width: 100%; height: auto;">
+                <source src="images/animation3.mp4" type="video/mp4">
+            </video>
+        </div>
+        </div>
     
     
     
@@ -154,19 +183,19 @@
 
     <br><br>
 
-    <div class="fade-in"><b style="font-size: 60px;">Sådan fungerer det</b>
+    <div class="fade-in"><b style="font-size: 60px;">3 trin</b>
     </div>
     
     <div style="text-align: center; margin-top: 50px;" class="box1">
         <b style="font-size: 27px; position: relative; top: 20px; font-weight: 900;">1. Vælg løsning</b>
-        <p style="margin-top: 30px; font-size: 20px; font-weight: 100;">Vælg løsning og tilkøb til dine preferencer <br>og beregn prisen automatisk</p>
+        <p style="margin-top: 30px; font-size: 20px; font-weight: 100;">Vælg løsning og tilkøb til dine preferencer og beregn prisen automatisk</p>
     </div>
     
     <div class="vertical-line"></div>
     
     <div style="text-align: center;" class="box1">
         <b style="font-size: 27px; position: relative; top: 20px; font-weight: 900;">2. Bestil hjemmeside</b>
-        <p style="margin-top: 30px; font-size: 20px; font-weight: 100;">Bestil hjemmesiden - ligeså nemt som at handle <br> på en webshop</p>
+        <p style="margin-top: 30px; font-size: 20px; font-weight: 100;">Bestil hjemmesiden - ligeså nemt som at handle &nbsp; på en webshop</p>
     </div>
     
     <div class="vertical-line"></div>
@@ -202,7 +231,9 @@
 <br><br>
 
 <div class="fade-in">
-    <b style="font-size: 60px; margin-top: 50px;">Vores ekspertise</b>
+    <b style="font-size: 60px; margin-top: 50px;">Vores</b>
+</div>
+<div class="fade-in"><b style="font-size: 60px;">Eskpertise</b>
 </div>
 
     <div style="text-align: center; margin-top: 25px;" class="box6 fade-in">
@@ -217,7 +248,7 @@
 
 
 
-<div style="background-color: #161C25; width: 97%; color: #fff; padding: 20px; text-align: center;" >
+<div style="background-color: #161C25; width: 99%; color: #fff; padding: 20px; box-sizing: border-box; text-align: center;"> 
     <br>
     <div style="text-align: center;" class="fade-in">
         <b style="font-size: 60px;">Om os</b>
@@ -236,9 +267,12 @@
         </p></div>
         
         <div>
-            <div class="fade-in"><video autoplay loop muted width="500">
-                <source src="images/animation4.mp4" type="video/mp4">
-            </video></div>
+            <div class="fade-in">
+                <video autoplay loop muted width="500" style="max-width: 100%; height: auto;">
+                    <source src="images/animation4.mp4" type="video/mp4">
+                </video>
+            </div>
+            </div>
 <br>
 
 <p style="color: #fff; font-size: 30px; text-align: center;">
@@ -248,7 +282,7 @@
 
     
 
-<div class="fade-in"><b style="font-size: 27px; position: relative; top: 20px; font-weight: 900;">Vores mål</b>
+<div class="fade-in"><b style="font-size: 27px; text-align: center; font-weight: 900;">Vores mål</b>
     <p style="color: #fff; font-size: 27px;">
         <b style="font-weight: 10;">Vores mål er at gøre det nemt
             og overskueligt for danske <br>virksomheder at få en professionel online tilstedeværelse.
@@ -459,8 +493,9 @@
     </a>
 </div>
 <div class="fade-in">
-    <p style="font-size: 35px; margin-top: 50px;">Vi ser frem til at høre fra dig</p>
+    <p style="font-size: 35px; margin-top: 50px; text-align: center;">Vi ser frem til at høre fra dig</p>
 </div>
+
 
 <script>
    
