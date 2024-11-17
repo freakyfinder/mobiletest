@@ -10,6 +10,12 @@ body {
     background-color: #F1F1ED;
     padding: 0;
     overflow-x: hidden;
+    width: 100%; /* Full width for the viewport */
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
 }
 
 html {
@@ -138,8 +144,13 @@ img {
 }
 
 .navbar-logo {
-    width: 80px;
+    width: 80px; /* Default size for logo2.png */
     height: auto;
+}
+
+/* Apply to the smaller logo when logo3.png is shown */
+.small-logo {
+    width: 45px; /* Smaller size for logo3.png */
 }
 
 .projects-container {
@@ -179,10 +190,14 @@ footer {
     font-size: 14px;
 }
 
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8 {
+height: auto;
+}
+
 
 .box1, .box2 {
-    width: 90%; /* Adjust to fill most of the available space */
-    max-width: 450px; /* Keep the maximum width to maintain the original look */
+    width: 100%; /* Allow the boxes to take full width on mobile */
+    max-width: 100%; /* Ensure the width is not constrained on smaller screens */
     height: 140px;
     background-color: #ff2d2d; /* Specific to .box1 */
     text-align: center;
@@ -195,6 +210,12 @@ footer {
 .box2 {
     background-color: #F1F1ED;
     color: #161C25;
+}
+
+@media (min-width: 600px) {
+    .box1, .box2 {
+        max-width: 450px; /* Limit the maximum width for larger screens */
+    }
 }
 
 
@@ -268,7 +289,6 @@ footer {
 .box5 {
     width: 90%; /* Adjusts to fill most of the available space */
     max-width: 300px; /* Keeps the original max width */
-    height: 525px;
     background-color: #F1F1ED;
     text-align: center;
     color: #161C25;
@@ -280,7 +300,6 @@ footer {
 .box6 {
     width: 90%; /* Adjusts to fill most of the available space */
     max-width: 575px; /* Keeps the original max width */
-    height: 135px;
     background-color: #F1F1ED;
     text-align: center;
     color: #161C25;
@@ -293,7 +312,6 @@ footer {
 .box7 {
     width: 90%; /* Adjusts to fill most of the available space */
     max-width: 500px; /* Keeps the original max width */
-    height: 130px;
     background-color: #F1F1ED;
     text-align: center;
     color: #161C25;
@@ -306,7 +324,6 @@ footer {
 .box8 {
     width: 90%; /* Adjusts to fill most of the available space */
     max-width: 1000px; /* Keeps the width reasonable on large screens */
-    height: 230px;
     background-color: #161C25;
     text-align: center;
     color: #F1F1ED;
